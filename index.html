@@ -1,39 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PORTFOLIO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akarsh Bangera - Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <div class="header-left-side">
-        <h1>Akarsh Bangera</h1>
-        <h2>BEGINNER</h2>
-        <p>
-          I am Akarsh Bangera.I am currently pursuing Bachelors in Computer
-          Science Data Science.
+  <body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-30 top-0">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+          <!-- Brand -->
+          <a
+            href="#home"
+            class="text-2xl font-bold text-yellow-400 hover:text-yellow-300 select-none"
+          >
+            Akarsh Bangera
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 font-semibold text-sm">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#objective" class="nav-link">Objective</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#resume" class="nav-link">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            aria-label="Toggle menu"
+            class="md:hidden text-yellow-400 focus:outline-none"
+          >
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <a href="#home" class="mobile-link active">Home</a>
+        <a href="#objective" class="mobile-link">Objective</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
+        <a href="#resume" class="mobile-link">Resume</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="flex-grow flex items-center justify-center pt-20 pb-16 px-6"
+    >
+      <div class="max-w-4xl text-center">
+        <img
+          src="Profile pic.jpg"
+          alt="Portrait of Akarsh Bangera"
+          width="150"
+          height="150"
+          class="mx-auto rounded-full profile-img mb-6 shadow-lg"
+        />
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-yellow-400">
+          Akarsh Bangera
+        </h1>
+        <p
+          class="text-lg md:text-xl max-w-xl mx-auto leading-relaxed text-gray-300"
+        >
+          Engineering student passionate about Artificial Intelligence and Data
+          Science. Seeking hands-on internship opportunities to contribute to
+          impactful AI-driven solutions.
         </p>
-        <button>
-          <a href="education.html"><b>My EDUCATION</b></a>
-        </button>
-        <br />
-        <br />
-        <button>
-          <a href="projects.html"><b>My PROJECTS</b></a>
-        </button>
-        <br />
-        <br />
-        <button>
-          <a href="CONTACT.html"><b>Contact</b></a>
-        </button>
-        <br />
-        <br />
+
+        <!-- Social Links -->
+        <div
+          class="mt-8 flex justify-center space-x-6 text-yellow-400 text-2xl"
+        >
+          <a href="mailto:akarshbangera5114@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="tel:+918147741154" aria-label="Phone"
+            ><i class="fas fa-phone"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/akarsh-bangera"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Akarsh1154"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
-      <div class="header-right-side">
-        <img src="imgs/Profile pic.jpg" alt="img" />
-      </div>
-    </header>
+    </section>
+
+    <!-- Main Sections -->
+    <main class="max-w-5xl mx-auto px-6 pb-16 space-y-16">
+      <!-- Objective -->
+      <section id="objective" class="scroll-mt-32">
+        <h2 class="section-heading">Objective</h2>
+        <p class="section-text">
+          Motivated and curious engineering student with a strong interest in
+          Artificial Intelligence and Data Science. Eager to apply programming
+          skills, machine learning knowledge, and a problem-solving mindset to
+          real-world projects.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="scroll-mt-24">
+        <h2 class="section-heading">Education</h2>
+        <div class="space-y-10 max-w-4xl">
+          <article>
+            <h3 class="edu-title">St. Joseph Engineering College</h3>
+            <p class="edu-sub">B.E in Computer Science Data Science</p>
+            <p class="edu-time">Sept 2022 – May 2026</p>
+            <p class="edu-detail">CGPA: 7.37</p>
+          </article>
+          <article>
+            <h3 class="edu-title">MES Indian School, PCMC</h3>
+            <p class="edu-time">Aug 2020 – March 2022</p>
+            <p class="edu-detail">Percentage: 64.4%</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="scroll-mt-24">
+        <h2 class="section-heading">Projects</h2>
+        <div class="space-y-12 max-w-5xl">
+          <!-- Project 1 -->
+          <article>
+            <h3 class="project-title">
+              Personal Portfolio Website
+              <a href="https://vercel.com" target="_blank" class="project-link"
+                >Portfolio</a
+              >
+            </h3>
+            <ul class="project-list">
+              <li>
+                Designed and developed a responsive, user-friendly personal
+                portfolio website
+              </li>
+              <li>
+                Deployed the website on Vercel for fast loading and reliable
+                hosting
+              </li>
+              <li>Built interactive UI components using HTML and CSS</li>
+            </ul>
+            <p class="project-tools">Tools Used: HTML, CSS, JS</p>
+          </article>
+
+          <!-- Project 2 -->
+          <article>
+            <h3 class="project-title">
+              OCR Image Editor <span class="project-badge">OCR</span>
+            </h3>
+            <ul class="project-list">
+              <li>Integrated Tesseract OCR engine for text recognition</li>
+              <li>Supported multi-language OCR with easy selection</li>
+              <li>Designed GUI for image input and text extraction</li>
+            </ul>
+            <p class="project-tools">
+              Tools Used: OpenCV, pytesseract, NumPy, Pillow
+            </p>
+          </article>
+
+          <!-- Project 3 -->
+          <article>
+            <h3 class="project-title">
+              E-Commerce Website <span class="project-badge">E-COMMERCE</span>
+            </h3>
+            <ul class="project-list">
+              <li>Implemented a fully responsive e-commerce website</li>
+              <li>Created dynamic product galleries and shopping cart</li>
+              <li>Added form validations and input handling</li>
+            </ul>
+            <p class="project-tools">Tools Used: HTML, CSS, JavaScript, API</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="scroll-mt-24">
+        <h2 class="section-heading">Technical Skills</h2>
+        <div class="skills-list">
+          <p>
+            <span class="highlight">Languages:</span> Python, C++, SQL, MATLAB,
+            HTML/CSS, JavaScript
+            <span class="highlight">Languages:</span>
+          </p>
+          <p>
+            <span class="highlight">Libraries & Tools:</span> NumPy, Pandas,
+            Scikit-learn, OpenCV, Git
+          </p>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="scroll-mt-24">
+        <h2 class="section-heading">Certifications</h2>
+        <div class="space-y-8 text-gray-300">
+          <article>
+            <h3 class="cert-title">IBM - Project Management Fundamentals</h3>
+            <p>
+              Strong grasp of project management with focus on planning,
+              scheduling, and coordination.
+            </p>
+          </article>
+          <article>
+            <h3 class="cert-title">IBM - Data Science 101</h3>
+            <p>
+              Introduction to data science, lifecycle, and tools like Jupyter
+              &amp; Python.
+            </p>
+          </article>
+          <article>
+            <h3 class="cert-title">Meta – Marketing Analytics with Meta</h3>
+            <p>
+              Learned fundamentals of marketing analytics using Excel and
+              statistics.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="scroll-mt-24 text-center">
+        <h2 class="section-heading">Resume</h2>
+        <p class="section-text">
+          Download my latest resume to learn more about my skills, projects, and
+          experience.
+        </p>
+        <a
+          href="AKARSH_BANGERA_.pdf"
+          download="Akarsh_Bangera_Resume.pdf"
+          target="_blank"
+          class="btn-primary mx-auto"
+        >
+          <i class="fas fa-download text-xl"></i> Download Resume
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm select-none text-yellow-400">
+      © 2024 Akarsh Bangera. All rights reserved.
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
   </body>
 </html>
